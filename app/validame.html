@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Validación de formularios</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css"/>
+    <!-- endbuild -->
+  </head>
+  <body>
+<!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">                 <!--Menú--> 
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="">Validación de formularios</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="validame.html">Formulario</a></li>
+             <li><a href="http://paletton.com/#uid=13a0u0kQ2rGrXPEN-CZQUk3RG9H">Colores</a></li>
+            <li><a href="https://github.com/anagilsal/practica-validacion-formularios">Github</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-->
+    </nav><!--fin del menú-->                                            <!--fin del menú-->  
+    <div class="container" id="todo">                                              <!--Contenedor de todo el contenido --> 
+          <div class="jumbotron" id="rotulo">                                      <!--jumbo-->
+             <p><h1>Formulario validado</h1></p>           
+          </div>                                                                   <!--FIn de jumbo--> 
+          <FORM action="validame.html" method="post">
+          <div class="jumbotron" id="seccion">                                                  <!--jumbo-->
+            <div class="container">
+               <div class="col-xs-12 col-lg-4">
+                <h2>Información de Contacto:</h2>
+                 <div class="well well-lg" >
+                    <LABEL for="nombre">Nombre: </LABEL><BR> <INPUT type="text" id="nombre" class="nombre"><BR><BR>
+                    <LABEL for="apellidos">Apellidos: </LABEL><BR> <INPUT type="text" id="apellidos" class="apellido"><BR><BR>
+                    <LABEL for="telefono">Teléfono: </LABEL><BR> <INPUT type="text" id="telefono" class="telefono"><BR><BR>
+                    <LABEL for="email">Email: </LABEL><BR> <INPUT type="text" id="email" class="email"><BR><BR>
+                    <LABEL for="repetiremail"> Repetir email: </LABEL><BR> <INPUT type="text" id="repetiremail" class="repetiremail"><BR><BR>
+                    <LABEL for="conocer">¿Cómo nos has conocido?</LABEL><BR>
+                      <INPUT type="radio" id="conocer" name="conocer" value="publicidad">Publicidad<BR>
+                      <INPUT type="radio" id="conocer" name="conocer" value="internet">Internet<BR>
+                      <INPUT type="radio" id="conocer" name="conocer" value="profesionales">Profesionales del sector<BR> 
+                      <INPUT type="radio" id="conocer" name="conocer" value="amigo">A través de un amigo o conocido<BR>
+                      <INPUT type="radio" id="conocer" name="conocer" value="NC"> Prefiero no contestar<BR>
+                 </div>
+              </div> 
+
+
+              <div class="col-xs-12 col-lg-4">
+              <h2>Datos para la facturación:</h2>
+                 <div class="well well-lg" >
+                    <LABEL for="demandante">Demandante:</LABEL><BR>
+                        <INPUT type="radio" id="demandante" name="demandante" value="empresa">Empresa 
+                        <INPUT type="radio" id="demandante" name="demandante" value="particular">Particular<BR><BR>
+                    <LABEL for="cifinifi">CIF/NIF: </LABEL><BR> <INPUT type="text" id="cifinifi" class="cifinifi"><BR><BR>
+                    <LABEL for="direccion">Dirección: </LABEL><BR> <INPUT type="text" id="direccion" class="direccion"><BR><BR>
+                    <LABEL for="cp">CP: </LABEL><BR> <INPUT type="text" id="cp" class="cp"><BR><BR>
+                    <LABEL for="localidad">Localidad: </LABEL><BR> <INPUT type="text" id="localidad" class="localidad"><BR><BR>
+                    <LABEL for="provincia">Provincia: </LABEL><BR> <INPUT type="text" id="provincia" class="provincia"><BR><BR>
+                    <LABEL for="pais">País: </LABEL><BR> <INPUT type="text" id="pais" class="pais"><BR><BR>
+                    <LABEL for="iban">Código IBAN:</LABEL><BR> <INPUT type="text" id="iban" class="iban"><BR><BR>
+                    <LABEL for="pago">Forma de pago:</LABEL><BR>
+                        <INPUT type="radio" id="pago" name="pago" value="mensual">Mensual<BR>
+                        <INPUT type="radio" id="pago" name="pago" value="trimestral">Trimestral<BR>
+                        <INPUT type="radio" id="pago" name="pago" value="anual">Anual<BR>    
+                 </div>
+              </div>
+              <div class="col-xs-12 col-lg-4">
+              <h2>Datos para el acceso a la web:</h2>
+                 <div class="well well-lg" >
+                    <LABEL for="usuario">Usuario: </LABEL><BR> <INPUT type="text" id="usuario" class="usuario"><BR><BR>
+                    <LABEL for="contrasena">Contraseña: </LABEL><BR> <INPUT type="text" id="contrasena" class="contrasena"><BR><BR>
+                    <LABEL for="contrasenarepe">Repetir contraseña: </LABEL><BR> <INPUT type="text" id="contrasenarepe" class="contrasenarepe"><BR><BR>
+                 </div>
+              </div>
+              <div class="col-xs-12" id="botones">
+                <div class="well well-lg" >
+                  <INPUT type="submit" value="Enviar"/> <INPUT type="reset"/>
+                </div>
+              </div>
+            </div>
+            
+         </div>                                                                   <!--FIn de jumbo-->         
+    </div>                                                               <!--Fin de Contenedor de todo el contenido --> 
+
+ <nav class="navbar navbar-inverse navbar-fixed-bottom">              <!--FOoter--> 
+  <div class="container">
+    <div class="navbar-footer">          
+      <div class="pie">
+        <p>Copyright &copy; 2015 Practica validación de formularios - by Ana Gil Salvatierra</p>
+      </div>
+    </div>
+  </div><!-- /.container-->
+ </nav>                                                               <!--Fin de FOoter-->
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-validate/dist/jquery.validate.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

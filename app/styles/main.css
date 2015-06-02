@@ -1,29 +1,59 @@
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+body
+{
+
+  background-color: #003226;
+
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
+body #todo
+{
+  padding-top: 80px;
+  padding-bottom: 80px;
+
 }
 
-.hero-unit h1 {
-  font-size: 60px;
-  line-height: 1;
-  letter-spacing: -1px;
+#portada
+{
+
+    background-color: #008F6B;
+    text-align: center;
+
 }
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+
+
+a:link {color:#003226;}
+a:visited {color:#00684E;}
+a:active {color:#00684E;}
+
+#botones
+{
+  text-align: center;
 }
+
+
+#rotulo
+{
+    background-color: #008F6B;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#seccion
+{
+    background-color: #008F6B;
+}
+
+
+
+
+
+/* Palette URL: http://paletton.com/#uid=13a0u0kQ2rGrXPEN-CZQUk3RG9H */
+
+/*color codes */
+
+/*.color-primary-0 { color: #008F6B } /*medio*/
+/*.color-primary-1 { color: #1CDFAF } /*clarito*/
+/*.color-primary-2 { color: #00BC8D } /*claro*/
+/*.color-primary-3 { color: #00684E } /*oscuro*/
+/*.color-primary-4 { color: #003226 } /*oscurazo*/
