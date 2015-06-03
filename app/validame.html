@@ -46,19 +46,19 @@
     </nav><!--fin del menú-->                                            <!--fin del menú-->  
     <div class="container" id="todo">                                              <!--Contenedor de todo el contenido --> 
           <div class="jumbotron" id="rotulo">                                      <!--jumbo-->
-             <p><h1>Formulario validado</h1></p>           
+             <p><h1>Venta de servicios de internet</h1></p>           
           </div>                                                                   <!--FIn de jumbo--> 
-          <FORM action="validame.html" method="post">
-          <div class="jumbotron" id="seccion">                                                  <!--jumbo-->
+          <FORM id="Formulario" action="validame.html" method="post" >
+          <div class="jumbotron" id="seccion">                                                  
             <div class="container">
                <div class="col-xs-12 col-lg-4">
                 <h2>Información de Contacto:</h2>
                  <div class="well well-lg" >
-                    <LABEL for="nombre">Nombre: </LABEL><BR> <INPUT type="text" id="nombre" class="nombre"><BR><BR>
-                    <LABEL for="apellidos">Apellidos: </LABEL><BR> <INPUT type="text" id="apellidos" class="apellido"><BR><BR>
-                    <LABEL for="telefono">Teléfono: </LABEL><BR> <INPUT type="text" id="telefono" class="telefono"><BR><BR>
-                    <LABEL for="email">Email: </LABEL><BR> <INPUT type="text" id="email" class="email"><BR><BR>
-                    <LABEL for="repetiremail"> Repetir email: </LABEL><BR> <INPUT type="text" id="repetiremail" class="repetiremail"><BR><BR>
+                    <LABEL for="nombre">Nombre: </LABEL><BR> <INPUT name= "nombre" id="nombre" type="text"><BR><BR>
+                    <LABEL for="apellidos">Apellidos: </LABEL><BR> <INPUT type="text" name="apellidos" id="apellido"><BR><BR>
+                    <LABEL for="telefono">Teléfono: </LABEL><BR> <INPUT type="text" id="telefono" name="telefono"><BR><BR>
+                    <LABEL for="email">Email: </LABEL><BR> <INPUT type="text" id="email" name="email"><BR><BR>
+                    <LABEL for="repetiremail"> Repetir email: </LABEL><BR> <INPUT type="text" id="repetiremail" name="repetiremail"><BR><BR>
                     <LABEL for="conocer">¿Cómo nos has conocido?</LABEL><BR>
                       <INPUT type="radio" id="conocer" name="conocer" value="publicidad">Publicidad<BR>
                       <INPUT type="radio" id="conocer" name="conocer" value="internet">Internet<BR>
@@ -75,13 +75,14 @@
                     <LABEL for="demandante">Demandante:</LABEL><BR>
                         <INPUT type="radio" id="demandante" name="demandante" value="empresa">Empresa 
                         <INPUT type="radio" id="demandante" name="demandante" value="particular">Particular<BR><BR>
-                    <LABEL for="cifinifi">CIF/NIF: </LABEL><BR> <INPUT type="text" id="cifinifi" class="cifinifi"><BR><BR>
-                    <LABEL for="direccion">Dirección: </LABEL><BR> <INPUT type="text" id="direccion" class="direccion"><BR><BR>
-                    <LABEL for="cp">CP: </LABEL><BR> <INPUT type="text" id="cp" class="cp"><BR><BR>
-                    <LABEL for="localidad">Localidad: </LABEL><BR> <INPUT type="text" id="localidad" class="localidad"><BR><BR>
-                    <LABEL for="provincia">Provincia: </LABEL><BR> <INPUT type="text" id="provincia" class="provincia"><BR><BR>
-                    <LABEL for="pais">País: </LABEL><BR> <INPUT type="text" id="pais" class="pais"><BR><BR>
-                    <LABEL for="iban">Código IBAN:</LABEL><BR> <INPUT type="text" id="iban" class="iban"><BR><BR>
+                    <LABEL for="cifinifi">CIF/NIF: </LABEL><BR> <INPUT type="text" id="cifinifi" name="cifinifi"><BR><BR>
+                    <LABEL for="empresa">Empresa: </LABEL><BR> <INPUT name= "empresa" id="empresa" type="text"><BR><BR>
+                    <LABEL for="direccion">Dirección: </LABEL><BR> <INPUT type="text" id="direccion" name="direccion"><BR><BR>
+                    <LABEL for="cp">CP: </LABEL><BR> <INPUT type="text" id="cp" name="cp"><BR><BR>
+                    <LABEL for="localidad">Localidad: </LABEL><BR> <INPUT type="text" id="localidad" name="localidad"><BR><BR>
+                    <LABEL for="provincia">Provincia: </LABEL><BR> <INPUT type="text" id="provincia" name="provincia"><BR><BR>
+                    <LABEL for="pais">País: </LABEL><BR> <INPUT type="text" id="pais" name="pais"><BR><BR>
+                    <LABEL for="iban">Código IBAN:</LABEL><BR> <INPUT type="text" id="iban" name="iban"><BR><BR>
                     <LABEL for="pago">Forma de pago:</LABEL><BR>
                         <INPUT type="radio" id="pago" name="pago" value="mensual">Mensual<BR>
                         <INPUT type="radio" id="pago" name="pago" value="trimestral">Trimestral<BR>
@@ -91,9 +92,9 @@
               <div class="col-xs-12 col-lg-4">
               <h2>Datos para el acceso a la web:</h2>
                  <div class="well well-lg" >
-                    <LABEL for="usuario">Usuario: </LABEL><BR> <INPUT type="text" id="usuario" class="usuario"><BR><BR>
-                    <LABEL for="contrasena">Contraseña: </LABEL><BR> <INPUT type="text" id="contrasena" class="contrasena"><BR><BR>
-                    <LABEL for="contrasenarepe">Repetir contraseña: </LABEL><BR> <INPUT type="text" id="contrasenarepe" class="contrasenarepe"><BR><BR>
+                    <LABEL for="usuario">Usuario: </LABEL><BR> <INPUT type="text" id="usuario" name="usuario"><BR><BR>
+                    <LABEL for="contrasena">Contraseña: </LABEL><BR> <INPUT type="text" id="contrasena" name="contrasena"><BR><BR>
+                    <LABEL for="contrasenarepe">Repetir contraseña: </LABEL><BR> <INPUT type="text" id="contrasenarepe" name="contrasenarepe"><BR><BR>
                  </div>
               </div>
               <div class="col-xs-12" id="botones">
@@ -102,7 +103,7 @@
                 </div>
               </div>
             </div>
-            
+           </FORM> 
          </div>                                                                   <!--FIn de jumbo-->         
     </div>                                                               <!--Fin de Contenedor de todo el contenido --> 
 
@@ -118,6 +119,7 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!--script src="scripts/mensPersonal.js"></script>-->
     <script src="bower_components/jquery-validate/dist/jquery.validate.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
@@ -125,6 +127,7 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/ana.js">
         <!-- endbuild -->
 </body>
 </html>
