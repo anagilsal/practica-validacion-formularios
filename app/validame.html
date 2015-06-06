@@ -73,10 +73,10 @@
               <h2>Datos para la facturación:</h2>
                  <div class="well well-lg" >
                     <LABEL for="demandante">Demandante:</LABEL><BR>
-                        <INPUT type="radio" id="demandante" name="demandante" value="empresa">Empresa 
-                        <INPUT type="radio" id="demandante" name="demandante" value="particular">Particular<BR><BR>
+                        <INPUT type="radio"  id="demandante" name="demandante" value="empresas" />Empresa
+                        <INPUT type="radio"  id="demandante" name="demandante" value="particular" checked="checked"/>Particular<BR><BR>
                     <LABEL for="cifinifi">CIF/NIF: </LABEL><BR> <INPUT type="text" id="cifinifi" name="cifinifi"><BR><BR>
-                    <LABEL for="empresa">Empresa: </LABEL><BR> <INPUT name= "empresa" id="empresa" type="text"><BR><BR>
+                    <LABEL for="empresa" id="denominadoEmpresa">Nombre: </LABEL><BR> <INPUT name= "empresa" id="empresa" type="text"><BR><BR>
                     <LABEL for="direccion">Dirección: </LABEL><BR> <INPUT type="text" id="direccion" name="direccion"><BR><BR>
                     <LABEL for="cp">CP: </LABEL><BR> <INPUT type="text" id="cp" name="cp"><BR><BR>
                     <LABEL for="localidad">Localidad: </LABEL><BR> <INPUT type="text" id="localidad" name="localidad"><BR><BR>
@@ -84,17 +84,22 @@
                     <LABEL for="pais">País: </LABEL><BR> <INPUT type="text" id="pais" name="pais"><BR><BR>
                     <LABEL for="iban">Código IBAN:</LABEL><BR> <INPUT type="text" id="iban" name="iban"><BR><BR>
                     <LABEL for="pago">Forma de pago:</LABEL><BR>
+                    <fieldset>
                         <INPUT type="radio" id="pago" name="pago" value="mensual">Mensual<BR>
                         <INPUT type="radio" id="pago" name="pago" value="trimestral">Trimestral<BR>
-                        <INPUT type="radio" id="pago" name="pago" value="anual">Anual<BR>    
+                        <INPUT type="radio" id="pago" name="pago" value="anual">Anual<BR>   
+                    </fieldset> 
                  </div>
               </div>
               <div class="col-xs-12 col-lg-4">
               <h2>Datos para el acceso a la web:</h2>
                  <div class="well well-lg" >
-                    <LABEL for="usuario">Usuario: </LABEL><BR> <INPUT type="text" id="usuario" name="usuario"><BR><BR>
-                    <LABEL for="contrasena">Contraseña: </LABEL><BR> <INPUT type="text" id="contrasena" name="contrasena"><BR><BR>
-                    <LABEL for="contrasenarepe">Repetir contraseña: </LABEL><BR> <INPUT type="text" id="contrasenarepe" name="contrasenarepe"><BR><BR>
+                    <LABEL for="usuario">Usuario: </LABEL><BR> <INPUT type="text" id="usuario" name="usuario" readonly="readonly"><BR><BR>
+                    <LABEL for="contrasena">Contraseña: </LABEL><BR> <INPUT type="password" id="contrasena" name="contrasena">
+                    <div class="password-meter">
+                        <div class="password-meter-message"></div>
+                    </div><BR><BR>
+                    <LABEL for="contrasenarepe">Repetir contraseña: </LABEL><BR> <INPUT type="password" id="contrasenarepe" name="contrasenarepe"><BR><BR>
                  </div>
               </div>
               <div class="col-xs-12" id="botones">
@@ -122,6 +127,8 @@
     <!--script src="scripts/mensPersonal.js"></script>-->
     <script src="bower_components/jquery-validate/dist/jquery.validate.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="scripts/jquery.validate.password.js"></script>
+
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -129,5 +136,6 @@
         <script src="scripts/main.js"></script>
         <script src="scripts/ana.js">
         <!-- endbuild -->
+        
 </body>
 </html>

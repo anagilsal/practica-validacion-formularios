@@ -44,7 +44,9 @@ a:active {color:#00684E;}
     background-color: #008F6B;
 }
 
-
+.error {
+    color: red ;
+}
 
 
 
