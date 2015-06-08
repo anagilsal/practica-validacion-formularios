@@ -12,14 +12,14 @@ $(document).ready(function(){
 			publicidad:{},
 			conocer:{},
 			demandante:{required : true},
-			cifinifi:{required : true},
+			cifinifi:{required :true},
 			empresa:{required : true},
 			direccion:{required : true},
 			cp:{required : true, maxlength: 5},
 			localidad:{required : true},
 			provincia:{required : true},
 			pais:{required : true},
-			iban:{required : true},
+			iban:{required : true,iban: true,maxlength: 24},
 			pago:{required : true},
 			//no pongo nada usuario por que ya se controla en email.
 			contrasena:{required : true},
@@ -43,7 +43,7 @@ $(document).ready(function(){
 			localidad:{required : 'debe rellenarme'},
 			provincia:{required : 'debe rellenarme'},
 			pais:{required : 'debe rellenarme'},
-			iban:{required : 'debe rellenarme'},
+			iban:{required : 'debe rellenarme',iban:'IBAN no válido',maxlength:'son 24 dígitos'},
 			pago:{required : 'debe rellenarme'},
 			usuario:{required : 'debe rellenarme'},
 			contrasena:{required : 'debe rellenarme'},
@@ -51,10 +51,9 @@ $(document).ready(function(){
 		},
 		submitHandler: function() 
 		{
-	         //var cuota = $('input[name=r_payment]:checked', '#validForm').val();
-	         //var r = confirm('¿Aceptas el pago de la primera cuota,€?');// ' + cuota + '
-	         // if (r == true) 
-	             alert('Así que vas a pagar... Formulario enviado!');
+	         var confirmacion = confirm('¿Aceptas el pago de la primera cuota,por un importe de €?');
+	          if (confirmacion === true) 
+	             {alert('contratación relaizada, se le enviará el primer recibo el dia 5 del proximo mes');}
         }
 
 	});
@@ -93,18 +92,28 @@ $(document).ready(function(){
     });
 
     // Si cambiamos datos de particular o empresa para facturar....
-     $('#demandante').change(function(){
-   
-     	if ($('input:radio[name=demandante]:checked').val() ==='empresas')
-     	{
-     		$('#denominadoEmpresa').text('Empresa:');
-     	} 
-     	if ($('input:radio[name=demandante]:checked').val() ==='particular')
-     	{
-     		$('#denominadoEmpresa').text('Persona:');
-     	} 
+ 
+	$('#empresas').change(function() {
+		if ($('#empresas').is(':checked')) {
+			$('#denominadoEmpresa').text('Empresa:');
+     		$('#denominadoCifinifi').text('CIF:');
+		}});
 
-	});
+	$('#particular').change(function() {
+		if ($('#particular').is(':checked')) {
+			$('#denominadoEmpresa').text('Persona:');
+     		$('#denominadoCifinifi').text('NIF:');
+			
+		}});
      $('#contrasena').valid();
+
+     //autorellenado de provincia
+             $('#cp').change(function() { //cuando cambiamos el código postal
+                if ($(this).val() !== '') {
+                    var dato = $(this).val();
+                        dato = dato.substring(0, 2);
+                    $('#provincia').val(dato);
+                }
+            });
 
 });
