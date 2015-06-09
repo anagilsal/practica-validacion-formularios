@@ -1,61 +1,10 @@
-body
-{
-
-  background-color: #003226;
-
+body {
+ 
+}
+.hero-unit {
+}
+.hero-unit h1 {
+}
+.browsehappy {
 }
 
-body #todo
-{
-  padding-top: 80px;
-  padding-bottom: 80px;
-
-}
-
-#portada
-{
-
-    background-color: #008F6B;
-    text-align: center;
-
-}
-
-
-
-a:link {color:#003226;}
-a:visited {color:#00684E;}
-a:active {color:#00684E;}
-
-#botones
-{
-  text-align: center;
-}
-
-
-#rotulo
-{
-    background-color: #008F6B;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-#seccion
-{
-    background-color: #008F6B;
-}
-
-.error {
-    color: red ;
-}
-
-
-
-/* Palette URL: http://paletton.com/#uid=13a0u0kQ2rGrXPEN-CZQUk3RG9H */
-
-/*color codes */
-
-/*.color-primary-0 { color: #008F6B } /*medio*/
-/*.color-primary-1 { color: #1CDFAF } /*clarito*/
-/*.color-primary-2 { color: #00BC8D } /*claro*/
-/*.color-primary-3 { color: #00684E } /*oscuro*/
-/*.color-primary-4 { color: #003226 } /*oscurazo*/

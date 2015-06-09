@@ -2,9 +2,12 @@
 /* Descomentaríamos la siguiente línea para mostrar errores de php en el fichero: */
 // ini_set('display_errors', '1');
 /* Definimos los parámetros de conexión con la bbdd: */
-$dbinfo = "mysql:dbname=formulario;host=localhost";
-$user = "root";
-$pass = "root";
+//$dbinfo = "mysql:dbname=validacion;host=localhost";
+//$user = "root";
+//$pass = "root";
+$dbinfo = "mysql:dbname=anagil_formulario;host=localhost";
+$user = "anagil_root";
+$pass = "rootroot";
 //Nos intentamos conectar:
 try {
     /* conectamos con bbdd e inicializamos conexión como UTF8 */
@@ -17,9 +20,9 @@ try {
 //$_REQUEST['email'] = "pepito@hotmail.com";
 if (isset($_REQUEST['email'])) {
     /* La línea siguiente la podemos descomentar para ver desde firebug-xhr si se pasa bien el parámetro desde el formulario */
-    echo $_REQUEST['email'];
+    //echo $_REQUEST['email'];
     $email = $_REQUEST['email'];
-    $sql = $db->prepare("SELECT * FROM usuarios WHERE Mail=?");
+    $sql = $db->prepare("SELECT * FROM clientes WHERE Mail=?");
     $sql->bindParam(1, $email, PDO::PARAM_STR);
     
  
