@@ -10,7 +10,20 @@
              telefono: {required: true,minlength: 9,maxlength: 9,digits: true},
              email: {required: true,minlength: 4,emailing: true, remote: "php/validar_email_db.php"},
              repetiremail: {required: true,equalTo: '#email'},
-             cifnif: {required: true, remote: "php/validar_nif_db.php"},
+             cifnif: 
+             {
+                required: true,remote: "php/validar_nif_db.php",
+              nifES: function() {
+                     if ($("#particular").is(':checked')) {
+                         return true;
+                     }
+                 },
+              cifES: function() {
+                     if ($("#empresas").is(':checked')) {
+                         return true;
+                     }
+                }
+            } ,
              empresa: {required: true},
              direccion: {required: true},
              postal_code: {required: true,digits: true,maxlength: 5},
@@ -30,7 +43,7 @@
             telefono: {required:'debe rellenarme',minlength:'complete hasta 9 digitos sin espacios ni simbolos',maxlength:'solo 9 digitos sin espacios ni simbolos',digits:'solo numeros'},
             email:{required: 'debe rellenarme',emailing:'inserte un mail valido',minlength: 'minimo 4 digitos',remote:'ya existe'},
             repetiremail:{required: 'debe rellenarme',equalTo:'tiene que coincidir'},
-            cifnif:{required: 'debe rellenarme', remote:'ya existe'},
+            cifnif:{required: 'debe rellenarme', remote:'ya existe',nifES:'NIF incorrecto',cifES:'CIF incorrecto'},
             empresa:{required: 'debe rellenarme'},
             direccion:{required: 'debe rellenarme'},
             postal_code:{required: 'debe rellenarme', maxlength: 'son 5 dígitos',digits:'solo numeros'},
